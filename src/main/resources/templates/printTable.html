@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>DATABASE Contents</title>
+    <style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+<table aria-colspan="2">
+    <tr th:each="details : ${finalTable}">
+                <td th:text="${details.stockName}"/>
+                <td th:text="${details.stockExchange}"/>
+                <td th:text="${details.currentPrice}"/>
+                <td th:text="${details.closingPrice}"/>
+                <td th:text="${details.date}"/>
+    </tr>
+</table>
+</body>
+</html>
